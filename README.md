@@ -1,6 +1,6 @@
 <!-- PROJECT LOGO -->
 
-# Miller Labs DSP's __mldsp-utils-python__
+# mldsp-utils-python
 
 <!-- TABLE OF CONTENTS -->
 <details>
