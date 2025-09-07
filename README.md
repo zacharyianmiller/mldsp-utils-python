@@ -1,8 +1,10 @@
 <!-- PROJECT LOGO -->
 
 # mldsp-utils-python
+## Miller Labs DSP
 
 <!-- TABLE OF CONTENTS -->
+<details>
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
@@ -11,6 +13,7 @@
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
+</details>
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
