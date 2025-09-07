@@ -42,4 +42,4 @@ See the LICENSE file [here](https://github.com/zacharyianmiller/mldsp-utils-pyth
 <!-- CONTACT -->
 ## Contact
 - [Email](https://mail.google.com/mail/?view=cm&fs=1&to=zacharyianmiller1@gmail.com&su=Inquiry)
-- [LinkedIn]()
+- [LinkedIn](https://www.linkedin.com/in/zacharyianmiller/)
