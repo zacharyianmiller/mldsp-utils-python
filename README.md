@@ -20,17 +20,13 @@ This is a Python development library for [**mlds-utils**](https://github.com/zac
 ## Roadmap
 The following is a running list of ongoing modules with marked complete / incomplete submodules:
 - ### **Filters**
-  #### IIR (infinite impulse response)
-    - [ ] <spec> freqz (MATLAB, Numpy adaptation)</spec>
-    - [ ] <spec> Butterworth</spec>
-    - [ ] <spec> Chebyshev</spec>
-    - [ ] <spec> Elliptic</spec>
-    - [ ] <spec> Z-transform</spec>
-    - [ ] <spec> Bilinear / Tunsten transform</spec>
-  #### FIR (finite impulse response)
-    - [ ] <spec> <spec>
-    - [ ] <spec> <spec>
-    - [ ] <spec> <spec>
+  - [ ] <spec> Filter designer:</spec>
+    - [ ] Butterworth
+    - [ ] Chebyshev
+    - [ ] Elliptic
+  - [x] <spec> freqz (MATLAB, NumPy adaptation)</spec>
+  - [ ] <spec> Z-transform</spec>
+  - [ ] <spec> Bilinear (Tunsten) transform</spec>
 
 - ### **Envelope**
 - [ ] <spec> Peak detection</spec>
