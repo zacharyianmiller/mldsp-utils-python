@@ -1,0 +1,45 @@
+<!-- PROJECT LOGO -->
+
+# mldsp-utils-python
+
+<!-- TABLE OF CONTENTS -->
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+    </li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ol>
+
+<!-- ABOUT THE PROJECT -->
+## About The Project
+This is a Python development library for [**mlds-utils**](https://www.google.com), a C++ library for real-time audio applications. 
+
+<!-- ROADMAP -->
+## Roadmap
+The following is a running list of ongoing modules with marked complete / incomplete submodules:
+- ### **Filters**
+  #### IIR (infinite impulse response)
+    - [ ] <spec> Butterworth</spec>
+    - [ ] <spec> Chebyshev</spec>
+    - [ ] <spec> Elliptic</spec>
+    - [ ] <spec> Z-transform</spec>
+    - [ ] <spec> Bilinear / Tunsten transform</spec>
+  #### FIR (finite impulse response)
+    - [ ] <spec> <spec>
+    - [ ] <spec> <spec>
+    - [ ] <spec> <spec>
+
+- ### **Envelope**
+- [ ] <spec> Peak detection</spec>
+- [ ] <spec> RMS detection</spec>
+
+<!-- LICENSE -->
+## License
+See the LICENSE file [here]() for more information.
+
+<!-- CONTACT -->
+## Contact
+- [Email](https://mail.google.com/mail/?view=cm&fs=1&to=zacharyianmiller1@gmail.com&su=Inquiry)
+- [LinkedIn]()
