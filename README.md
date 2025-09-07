@@ -29,8 +29,8 @@ The following is a running list of ongoing modules with marked complete / incomp
   - [ ] <spec> Bilinear (Tunsten) transform</spec>
 
 - ### **Envelope**
-- [ ] <spec> Peak detection</spec>
-- [ ] <spec> RMS detection</spec>
+  - [ ] <spec> Peak detection</spec>
+  - [ ] <spec> RMS detection</spec>
 
 <!-- LICENSE -->
 ## License
