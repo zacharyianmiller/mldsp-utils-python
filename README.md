@@ -14,7 +14,7 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-This is a Python development library for Miller Labs DSP's [**mldsp-utils**](https://github.com/zacharyianmiller/mldsp-utils) library, a C++ library for real-time audio applications. 
+This is a Python development library for Miller Labs DSP's [**mldsp-utils**](https://github.com/zacharyianmiller/mldsp-utils), a C++ library for real-time audio applications. 
 
 <!-- ROADMAP -->
 ## Roadmap
