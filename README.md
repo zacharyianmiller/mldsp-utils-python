@@ -14,13 +14,14 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-This is a Python development library for [**mlds-utils**](https://www.google.com), a C++ library for real-time audio applications. 
+This is a Python development library for [**mlds-utils**](https://github.com/zacharyianmiller/mldsp-utils), a C++ library for real-time audio applications. 
 
 <!-- ROADMAP -->
 ## Roadmap
 The following is a running list of ongoing modules with marked complete / incomplete submodules:
 - ### **Filters**
   #### IIR (infinite impulse response)
+    - [ ] <spec> freqz (MATLAB, Numpy adaptation)</spec>
     - [ ] <spec> Butterworth</spec>
     - [ ] <spec> Chebyshev</spec>
     - [ ] <spec> Elliptic</spec>
@@ -37,7 +38,7 @@ The following is a running list of ongoing modules with marked complete / incomp
 
 <!-- LICENSE -->
 ## License
-See the LICENSE file [here]() for more information.
+See the LICENSE file [here](https://github.com/zacharyianmiller/mldsp-utils-python/blob/main/LICENSE) for more information.
 
 <!-- CONTACT -->
 ## Contact
