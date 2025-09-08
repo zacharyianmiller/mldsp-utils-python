@@ -48,10 +48,11 @@ def pztool(b: np.array,
     r = 1.0  # circle radius
     plt.plot(r * np.cos(theta), r * np.sin(theta), color='blue', linewidth=1, linestyle='dotted')
     lim_bounds = [-r - 0.1, r + 0.1]
-    plt.xlabel('Real axis (Re)')
-    plt.ylabel('Imaginary axis (Im)')
+    plt.xlabel('Real (Re)')
+    plt.ylabel('Imaginary (Im)')
     plt.xlim(lim_bounds)
     plt.ylim(lim_bounds)
+    plt.grid(True, linestyle='dashed', color='lightgrey')
 
     for z in filter_zeros:
         plt.plot(z.real, z.imag, 'o', mfc='none', color='blue')
@@ -65,11 +66,11 @@ def pztool(b: np.array,
 
 if __name__ == "__main__":
     # IIR lowpass filter
-    # b_arr = np.array([0.0976, 0.1952, 0.0976])
-    # a_arr = np.array([1, -0.9429, 0.3334])
+    b_arr = np.array([0.0976, 0.1952, 0.0976])
+    a_arr = np.array([1, -0.9429, 0.3334])
 
     # FIR lowpass filter
-    b_arr = np.array([0.5, 0.5])
-    a_arr = np.array([1])
+    # b_arr = np.array([0.5, 0.5])
+    # a_arr = np.array([1])
 
     pztool(b_arr, a_arr)
