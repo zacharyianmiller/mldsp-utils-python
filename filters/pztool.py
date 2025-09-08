@@ -32,8 +32,13 @@ def pztool(b: np.array,
           a: np.array) -> int:
 
     # Find roots of numerator and denominator
-    zeros: np = np.roots(b)
-    poles = np.roots(a)
+    filter_zeros: np = np.roots(b)
+    filter_poles = np.roots(a)
+
+    # Account for FIR poles
+    if filter_poles.size is 0:
+        isFIR: bool = True
+        filter_poles = np.zeros(b.shape[0] - 1, dtype=complex)
 
     # Plot base unit circle at origin
     theta = np.linspace(0, 2 * np.pi, 100)
@@ -48,10 +53,10 @@ def pztool(b: np.array,
     plt.xlim(lim_bounds)
     plt.ylim(lim_bounds)
 
-    for z in zeros:
+    for z in filter_zeros:
         plt.plot(z.real, z.imag, 'o', mfc='none', color='blue')
 
-    for p in poles:
+    for p in filter_poles:
         plt.plot(p.real, p.imag, 'x', color='blue')
 
     plt.show()
@@ -60,11 +65,11 @@ def pztool(b: np.array,
 
 if __name__ == "__main__":
     # IIR lowpass filter
-    b_arr = np.array([0.0976, 0.1952, 0.0976])
-    a_arr = np.array([1, -0.9429, 0.3334])
+    # b_arr = np.array([0.0976, 0.1952, 0.0976])
+    # a_arr = np.array([1, -0.9429, 0.3334])
 
     # FIR lowpass filter
-    # b_arr = np.array([0.5, 0.5])
-    # a_arr = np.array([1])
+    b_arr = np.array([0.5, 0.5])
+    a_arr = np.array([1])
 
     pztool(b_arr, a_arr)
