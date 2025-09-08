@@ -28,6 +28,7 @@ The following is a running list of ongoing modules with marked complete / incomp
     - [ ] Chebyshev
     - [ ] Elliptic
   - [x] <spec> freqz (MATLAB, NumPy adaptation)</spec>
+  - [x] <spec> Pole-zero plot</spec>
   - [ ] <spec> Z-transform</spec>
   - [ ] <spec> Bilinear (Tunsten) transform</spec>
 
