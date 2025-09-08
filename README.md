@@ -34,7 +34,7 @@ The following is a running list of ongoing modules with marked complete / incomp
 
 - ### **Envelope**
   - [ ] <spec> Peak detection</spec>
-  - [ ] <spec> RMS detection</spec>
+  - [ ] <spec> RMS (FIR and IIR approximation)</spec>
 
 <!-- LICENSE -->
 ## License
