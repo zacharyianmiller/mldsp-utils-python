@@ -7,8 +7,6 @@ __version__ = "0.0.1"
 __email__ = "zacharyianmiller1@gmail.com"
 __date__ = "2025-09-07"
 
-from maths.roots_as_complex import roots_as_complex
-
 """ pztool.py: 
 
     A unit circle pole-zero plot for discrete filter design and implementation.
@@ -23,9 +21,6 @@ from maths.roots_as_complex import roots_as_complex
 # Python dependencies
 import numpy as np
 import matplotlib.pyplot as plt
-
-# Custom functions
-import maths.roots_as_complex
 
 
 def pztool(b: np.array,

@@ -104,11 +104,11 @@ def freqz(b: np.array,
 
 if __name__ == "__main__":
     # IIR lowpass filter
-    b_arr = np.array([0.0976, 0.1952, 0.0976])
-    a_arr = np.array([1, -0.9429, 0.3334])
+    # b_arr = np.array([0.0976, 0.1952, 0.0976])
+    # a_arr = np.array([1, -0.9429, 0.3334])
 
     # FIR lowpass filter
-    # b_arr = np.array([0.5, 0.5])
-    # a_arr = np.array([1])
+    b_arr = np.array([0.5, 0.5])
+    a_arr = np.array([1])
 
     freqz(b_arr, a_arr, 1024)
