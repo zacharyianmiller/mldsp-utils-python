@@ -7,15 +7,20 @@ __version__ = "0.0.1"
 __email__ = "zacharyianmiller1@gmail.com"
 __date__ = "2025-09-06"
 
-import sys
-
-from matplotlib import ticker
 
 """ movmax.py: 
+
+    Two-stack implementation of a moving maximum (peak-hold) filter
+    for windowed peak detection. This algorithm compares the maximums
+    of each array where the 'front' array manages the maximum value of
+    the input window and the 'back' array manages the previous history 
+    via a reverse cumulative maximum calculation done only when the input 
+    window is filled.
 
 """
 
 # Python dependencies
+import sys
 import numpy as np
 import matplotlib.pyplot as plt
 import soundfile as sf
@@ -58,14 +63,13 @@ def movmax_driver(selection: str):
         for n in range(len(x)):
             y[n] = mov_max.process(x[n])
 
-        ax, fig = plt.subplots()
-
         # Format x-axis
         plt.plot(x)
-        plt.xlabel("Time [samples]")
-        plt.plot(y, color='r', linestyle='--')
+        plt.xlabel('Time [samples]')
 
         # Format y-axis
+        plt.plot(y, color='r', linestyle='--')
+        plt.ylim([0.0, 1.025])
         plt.ylabel('Normalized value [unipolar]')
         plt.title('Moving Maximum Filter', fontsize=12, fontweight='bold')
         plt.show()
@@ -74,7 +78,7 @@ def movmax_driver(selection: str):
     elif selection == "2":
         mov_max = MovMax(kernel_size=4096)
 
-        x, fs = sf.read("../testing/audio/SnareTop.wav")
+        x, fs = sf.read("../../testing/audio/SnareTop.wav")
         x = np.abs(x[0:int(len(x)/2)-4000,1]) / np.max(np.abs(x)) # mono, normalized
         y: list = [0] * x.shape[0]
         for n in range(x.shape[0]):
@@ -82,7 +86,7 @@ def movmax_driver(selection: str):
 
         # Format x-axis
         plt.plot(x)
-        plt.xlabel("Time [samples]")
+        plt.xlabel('Time [samples]')
         ax = plt.gca()
         ticks = ax.get_xticks().tolist()
         ax.set_xticks(ticks)
