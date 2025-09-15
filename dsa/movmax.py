@@ -62,12 +62,12 @@ def movmax_driver(selection: str):
 
         # Format x-axis
         plt.plot(x)
-        plt.xlabel("Samples")
+        plt.xlabel("Time [samples]")
         plt.plot(y, color='r', linestyle='--')
 
         # Format y-axis
         plt.ylabel('Normalized value [unipolar]')
-        plt.title('Moving Maximum Filter', fontweight='bold')
+        plt.title('Moving Maximum Filter', fontsize=12, fontweight='bold')
         plt.show()
 
     # Audio example
@@ -82,7 +82,7 @@ def movmax_driver(selection: str):
 
         # Format x-axis
         plt.plot(x)
-        plt.xlabel("Samples")
+        plt.xlabel("Time [samples]")
         ax = plt.gca()
         ticks = ax.get_xticks().tolist()
         ax.set_xticks(ticks)
@@ -90,9 +90,9 @@ def movmax_driver(selection: str):
 
         # Format y-axis
         plt.plot(y, color='r', linestyle='--')
-        plt.ylim([0.2, 1.025])
+        plt.ylim([0.0, 1.025])
         plt.ylabel('Normalized value [unipolar]')
-        plt.title('Moving Maximum Filter', fontweight='bold')
+        plt.title('Moving Maximum Filter', fontsize=12, fontweight='bold')
         plt.show()
 
     else:
@@ -100,6 +100,6 @@ def movmax_driver(selection: str):
 
 if __name__ == "__main__":
     print("Choose example type to display:")
-    print("1. Basic example w/ random values")
-    print("2. Audio")
+    print("1. Normalized random values")
+    print("2. Mono audio signal")
     movmax_driver(input("Selection: "))
