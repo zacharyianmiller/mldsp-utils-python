@@ -8,7 +8,7 @@ __email__ = "zacharyianmiller1@gmail.com"
 __date__ = "2025-09-06"
 
 
-""" movmax.py: 
+""" moving_maximum.py: 
 
     Two-stack implementation of a moving maximum (peak-hold) filter
     for windowed peak detection. This algorithm compares the maximums
