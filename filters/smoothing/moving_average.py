@@ -43,12 +43,15 @@ class MovAvg:
 
 if __name__ == "__main__":
     # Basic example
-    mov_avg = MovAvg(kernel_size=4)
-    x = [0, 0, 0, 1, 1, 1, 0, 0, 0]
+    mov_avg = MovAvg(kernel_size=256)
+    x = [0] * 256 + [1] * 256 + [0] * 256
     y = np.zeros(len(x))
     for n in range(len(x)):
         y[n] = mov_avg.process(x[n])
 
     plt.plot(x)
+    plt.xlabel('Time [samples]')
     plt.plot(y)
+    plt.ylabel('Normalized value (unipolar)')
+    plt.title('Moving Average Filter')
     plt.show()
