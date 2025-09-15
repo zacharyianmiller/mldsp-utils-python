@@ -18,10 +18,10 @@ import matplotlib.pyplot as plt
 class IntDelay:
     def __init__(self, delay_samples: int):
         self.delay_samples = delay_samples
-        self.buffer: list = [0] * delay_samples
+        self.buffer = [0] * self.delay_samples
         self.w_idx = 0
 
-    def clear(self):
+    def reset(self):
         self.buffer = [0] * self.delay_samples
         self.w_idx = 0
 

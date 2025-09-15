@@ -14,6 +14,8 @@ __date__ = "2025-09-06"
 
 """
 
+
+# Python dependencies
 import numpy as np
 
 

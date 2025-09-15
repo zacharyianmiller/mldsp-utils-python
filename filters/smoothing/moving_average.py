@@ -7,6 +7,7 @@ __version__ = "0.0.1"
 __email__ = "zacharyianmiller1@gmail.com"
 __date__ = "2025-09-06"
 
+from matplotlib import pyplot as plt
 
 """ moving_average.py: 
 
@@ -15,15 +16,39 @@ __date__ = "2025-09-06"
 
 """
 
+
 # Python dependencies
-import sys
 import numpy as np
 import matplotlib.pyplot as plt
-import soundfile as sf
+
+
+# Custom functions
+from effects.delays.int_delay import IntDelay
+
 
 class MovAvg:
     def __init__(self, kernel_size):
         self.kernel_size = kernel_size
+        self.int_delay = IntDelay(kernel_size)
+        self.accumulator: float = 0.0
+        self.reset()
+
+    def reset(self):
+        self.int_delay.reset()
+        self.accumulator = 0.0
 
     def process(self, xn):
-        return xn
+        self.accumulator += xn - self.int_delay.process(xn)
+        return self.accumulator / self.kernel_size
+
+if __name__ == "__main__":
+    # Basic example
+    mov_avg = MovAvg(kernel_size=4)
+    x = [0, 0, 0, 1, 1, 1, 0, 0, 0]
+    y = np.zeros(len(x))
+    for n in range(len(x)):
+        y[n] = mov_avg.process(x[n])
+
+    plt.plot(x)
+    plt.plot(y)
+    plt.show()
