@@ -5,7 +5,7 @@ __copyright__ = "Copyright 2025, Miller Labs DSP"
 __license__ = "MIT"
 __version__ = "0.0.1"
 __email__ = "zacharyianmiller1@gmail.com"
-__date__ = "2025-09-06"
+__date__ = "2025-09-15"
 
 """ fir_exp_rel.py: 
 
@@ -17,7 +17,7 @@ __date__ = "2025-09-06"
 # Python dependencies
 import numpy as np
 
-class FIRExponentialRelease:
+class FIRExpRelease:
     def __init__(self, release_samples):
         self.release_slew = 1 / (release_samples + 1)
         self.yn = 1.0

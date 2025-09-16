@@ -26,10 +26,11 @@ import matplotlib.pyplot as plt
 import soundfile as sf
 
 class MovMax:
-    def __init__(self, kernel_size):
+    def __init__(self, kernel_size: int):
         self.kernel_size = kernel_size
-        self.front_max = sys.float_info.min
-        self.back: list = [sys.float_info.min] * kernel_size
+        self.neg_inf: float = -sys.float_info.max
+        self.front_max = self.neg_inf
+        self.back = [self.neg_inf] * int(kernel_size)
         self.front: list = []
 
     def process(self, xn):
@@ -39,14 +40,14 @@ class MovMax:
 
         # Pop back list
         if len(self.back) == 0:
-            back_max = sys.float_info.min
+            back_max = self.neg_inf
             while len(self.front) != 0:
                 # Reverse cumulative max, set back max
                 back_max = np.fmax(back_max, self.front.pop())
                 self.back.append(back_max)
 
             # Reset front max
-            self.front_max = sys.float_info.min
+            self.front_max = self.neg_inf
 
         # Compare maxes of front and back stacks
         return np.fmax(self.front_max, self.back.pop())

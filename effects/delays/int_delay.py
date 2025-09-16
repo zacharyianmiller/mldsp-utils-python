@@ -17,12 +17,12 @@ import matplotlib.pyplot as plt
 
 class IntDelay:
     def __init__(self, delay_samples: int):
-        self.delay_samples = delay_samples
-        self.buffer = [0] * self.delay_samples
-        self.w_idx = 0
+        self.delay_samples: int = delay_samples
+        self.buffer: list = [0] * int(self.delay_samples)
+        self.w_idx: int = 0
 
-    def reset(self):
-        self.buffer = [0] * self.delay_samples
+    def clear(self):
+        self.buffer = [0] * int(self.delay_samples)
         self.w_idx = 0
 
     def get_delay_samples(self):
@@ -30,11 +30,11 @@ class IntDelay:
 
     def process(self, xn):
         # Read buffer
-        r_idx: int = self.w_idx % self.delay_samples
+        r_idx = int(self.w_idx % self.delay_samples)
         yn: float = self.buffer[r_idx]
 
         # Write buffer
-        self.buffer[self.w_idx] = xn
+        self.buffer[int(self.w_idx)] = xn
         self.w_idx = (self.w_idx + 1) % self.delay_samples
 
         return yn

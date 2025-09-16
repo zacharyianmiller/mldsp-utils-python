@@ -31,7 +31,7 @@ def pztool(b: np.array,
     filter_poles = np.roots(a)
 
     # Account for FIR poles
-    if filter_poles.size is 0:
+    if filter_poles.size == 0:
         isFIR: bool = True
         filter_poles = np.zeros(b.shape[0] - 1, dtype=complex)
 
