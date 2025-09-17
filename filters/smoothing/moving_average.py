@@ -36,12 +36,15 @@ class MovAvg:
         [d.clear() for d in self.int_delay]
         self.accumulator = np.zeros(self.num_cascades)
 
-    def process(self, xn):
+    def get_num_cascades(self):
+        return self.num_cascades
+
+    def process(self, xn)-> float:
         yn: float = 0.0
         y1: float = xn
         for i in range(self.num_cascades):
             self.accumulator[i] += y1 - self.int_delay[i].process(y1)
-            yn = self.accumulator[i] / self.kernel_size
+            yn = float(self.accumulator[i] / self.kernel_size)
             y1 = yn # cascade feedback
 
         return yn
